@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruitment Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="dashboard">
+        <header class="dashboard__header">
+            <h1 class="dashboard__title">Recruitment Dashboard</h1>
+
+            <form class="dashboard-filters" aria-label="Dashboard filters">
+                <div class="dashboard-filters__field">
+                    <label for="date-range">Auto date range</label>
+                    <select id="date-range" name="date-range">
+                        <option selected>This Week</option>
+                        <option>Last 7 Days</option>
+                        <option>This Month</option>
+                    </select>
+                </div>
+
+                <div class="dashboard-filters__field">
+                    <label for="service">Services</label>
+                    <select id="service" name="service">
+                        <option selected>All</option>
+                    </select>
+                </div>
+
+                <div class="dashboard-filters__field">
+                    <label for="post">Posts</label>
+                    <select id="post" name="post">
+                        <option selected>All</option>
+                    </select>
+                </div>
+            </form>
+        </header>
+
+        <section class="dashboard-overview" aria-label="Recruitment overview">
+            <article class="chart-card chart-card--cost">
+                <h2 class="card-title">Cost Per Hire</h2>
+                <div class="bar-chart" role="img" aria-label="Cost per hire values across six periods: 6, 9, 12, 9, 4, and 6">
+                    <ol class="bar-chart__bars">
+                        <li class="bar-chart__item">
+                            <span class="bar-chart__bar bar-chart__bar--6" aria-hidden="true"></span>
+                            <span class="bar-chart__label">1</span>
+                        </li>
+                        <li class="bar-chart__item">
+                            <span class="bar-chart__bar bar-chart__bar--9" aria-hidden="true"></span>
+                            <span class="bar-chart__label">2</span>
+                        </li>
+                        <li class="bar-chart__item">
+                            <span class="bar-chart__bar bar-chart__bar--12" aria-hidden="true"></span>
+                            <span class="bar-chart__label">3</span>
+                        </li>
+                        <li class="bar-chart__item">
+                            <span class="bar-chart__bar bar-chart__bar--9" aria-hidden="true"></span>
+                            <span class="bar-chart__label">4</span>
+                        </li>
+                        <li class="bar-chart__item">
+                            <span class="bar-chart__bar bar-chart__bar--4" aria-hidden="true"></span>
+                            <span class="bar-chart__label">5</span>
+                        </li>
+                        <li class="bar-chart__item">
+                            <span class="bar-chart__bar bar-chart__bar--6" aria-hidden="true"></span>
+                            <span class="bar-chart__label">6</span>
+                        </li>
+                    </ol>
+                </div>
+            </article>
+
+            <article class="chart-card chart-card--ratio">
+                <h2 class="card-title">Recruiter-to-Open-Acquisitions Ratio</h2>
+                <div class="bar-chart" role="img" aria-label="Recruiter-to-open-acquisitions ratio across six periods">
+                    <ol class="bar-chart__bars">
+                        <li class="bar-chart__item">
+                            <span class="bar-chart__bar bar-chart__bar--7" aria-hidden="true"></span>
+                            <span class="bar-chart__label">1</span>
+                        </li>
+                        <li class="bar-chart__item">
+                            <span class="bar-chart__bar bar-chart__bar--10" aria-hidden="true"></span>
+                            <span class="bar-chart__label">2</span>
+                        </li>
+                        <li class="bar-chart__item">
+                            <span class="bar-chart__bar bar-chart__bar--6" aria-hidden="true"></span>
+                            <span class="bar-chart__label">3</span>
+                        </li>
+                        <li class="bar-chart__item">
+                            <span class="bar-chart__bar bar-chart__bar--3" aria-hidden="true"></span>
+                            <span class="bar-chart__label">4</span>
+                        </li>
+                        <li class="bar-chart__item">
+                            <span class="bar-chart__bar bar-chart__bar--5" aria-hidden="true"></span>
+                            <span class="bar-chart__label">5</span>
+                        </li>
+                        <li class="bar-chart__item">
+                            <span class="bar-chart__bar bar-chart__bar--7" aria-hidden="true"></span>
+                            <span class="bar-chart__label">6</span>
+                        </li>
+                    </ol>
+                </div>
+                <ul class="chart-legend" aria-label="Chart legend">
+                    <li class="chart-legend__item chart-legend__item--open">Open acquisitions</li>
+                    <li class="chart-legend__item chart-legend__item--recruiter">Recruiters</li>
+                </ul>
+            </article>
+
+            <section class="metric-grid" aria-label="Key recruitment metrics">
+                <article class="metric-card">
+                    <h2 class="metric-card__title">Cost Per Hire</h2>
+                    <p class="metric-card__value">$1,024</p>
+                    <p class="metric-card__change">↑ 13%</p>
+                    <p class="metric-card__comparison">vs previous 7 days</p>
+                </article>
+
+                <article class="metric-card">
+                    <h2 class="metric-card__title">Time To Hire</h2>
+                    <p class="metric-card__value">45.5</p>
+                    <p class="metric-card__change">↑ 1</p>
+                    <p class="metric-card__comparison">vs previous 7 days</p>
+                </article>
+
+                <article class="metric-card">
+                    <h2 class="metric-card__title">Time To Fill</h2>
+                    <p class="metric-card__value">32.5</p>
+                    <p class="metric-card__change">↓ 8%</p>
+                    <p class="metric-card__comparison">vs previous 7 days</p>
+                </article>
+
+                <article class="metric-card">
+                    <h2 class="metric-card__title">Application-to-Interview Ratio</h2>
+                    <p class="metric-card__value">11%</p>
+                    <p class="metric-card__change">↑ 2.3%</p>
+                    <p class="metric-card__comparison">vs previous 7 days</p>
+                </article>
+            </section>
+        </section>
+
+    </main>
+</body>
+</html>
